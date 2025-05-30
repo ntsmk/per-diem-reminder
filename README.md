@@ -1,37 +1,25 @@
-Per-Diem Email Notification
+# Per-Diem Email Reminder
 
-Description
+## Overview
 
-This project automates email notifications for employees whose time entries exceed a customizable threshold (default: 2 hours). The system alerts them that they may need to submit a per-diem request. 
-The project primarily utilizes Python and the ConnectWise API.
+This project automates email alerts for employees whose time entries exceed a configurable threshold (default: **2 hours**). When this threshold is passed, the system notifies employees that a per-diem request may be required.
 
-Installation
+The application is built using **Python** and integrates with the **ConnectWise API**.
 
-Follow these steps to set up the project locally:
+---
 
-1. Modify Deployment Script
+## Installation
 
-Edit deploy.ps1 to update the file path and server domain name.
+Follow the steps below to set up the project locally:
 
-Currently, the script is set to use a local folder path and a local VM IP address.
+### 1. Update the Deployment Script
 
-2. Configure Environment Variables
+Modify `deploy.ps1` to reflect your local environment:
 
-Create a .env file and add the required API credentials. Place .env file **under \per-diem\app**:
+- Update the folder path.
+- Replace the local VM IP with your server's domain or IP address.
 
-public_key=[YOUR_PUBLIC_KEY]
+### 2. Set Environment Variables
 
-private_key=[YOUR_PRIVATE_KEY]
-
-client_id=[YOUR_CLIENT_ID]
-
-company_id=[YOUR_COMPANY_ID]
-
-manage_url=[MANAGE_URL]
-
-3. Run the Application
-
-Execute the deployment script:
-
-.\deploy.ps1
+Create a `.env` file and place it in the following directory:
 

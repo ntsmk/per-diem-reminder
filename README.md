@@ -12,7 +12,7 @@ I noticed my supervisor keeps sending the per-diem submission request email to t
 
 ---
 
-## Installation
+## How to Install
 
 Follow the steps below to set up the project locally:
 

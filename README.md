@@ -6,6 +6,10 @@ This project automates email alerts for employees whose time entries exceed a co
 
 The application is built using **Python** and integrates with the **ConnectWise API**.
 
+## Why I built this?
+
+I noticed my supervisor keeps sending the per-diem submission request email to the employees manually. This made me think this is a good opportunity to automate it.
+
 ---
 
 ## Installation

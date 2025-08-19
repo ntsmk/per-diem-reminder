@@ -54,3 +54,11 @@ If everything is configured correctly, the script will begin checking time entri
 
 - Ensure Python and required dependencies are installed on your system.
 - For automation, you can schedule the script using Task Scheduler (Windows) or `cron` (Linux/macOS).
+
+---
+
+## Screenshot
+
+![screenshot_perdiem.jpeg](images/screenshot_perdiem.jpeg)
+
+---

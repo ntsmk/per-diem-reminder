@@ -1,37 +1,56 @@
-Per-Diem Email Notification
+# Per-Diem Email Reminder
 
-Description
+## Overview
 
-This project automates email notifications for employees whose time entries exceed a customizable threshold (default: 2 hours). The system alerts them that they may need to submit a per-diem request. 
-The project primarily utilizes Python and the ConnectWise API.
+This project automates email alerts for employees whose time entries exceed a configurable threshold (default: **2 hours**). When this threshold is passed, the system notifies employees that a per-diem request may be required.
 
-Installation
+The application is built using **Python** and integrates with the **ConnectWise API**.
 
-Follow these steps to set up the project locally:
+## Why I built this?
 
-1. Modify Deployment Script
+I noticed my supervisor keeps sending the per-diem submission request email to the employees manually. This made me think this is a good opportunity to automate it.
 
-Edit deploy.ps1 to update the file path and server domain name.
+---
 
-Currently, the script is set to use a local folder path and a local VM IP address.
+## How to Install
 
-2. Configure Environment Variables
+Follow the steps below to set up the project locally:
 
-Create a .env file and add the required API credentials. Place .env file **under \per-diem\app**:
+### 1. Update the Deployment Script
 
-public_key=[YOUR_PUBLIC_KEY]
+Modify `deploy.ps1` to reflect your local environment:
 
-private_key=[YOUR_PRIVATE_KEY]
+- Update the folder path.
+- Replace the local VM IP with your server's domain or IP address.
 
-client_id=[YOUR_CLIENT_ID]
+### 2. Set Environment Variables
 
-company_id=[YOUR_COMPANY_ID]
+Create a `.env` file and place it in the `\per-diem\app\` directory.
 
-manage_url=[MANAGE_URL]
+Add the following lines to the `.env` file, replacing the placeholders with your actual credentials:
 
-3. Run the Application
+- `public_key=[YOUR_PUBLIC_KEY]`
+- `private_key=[YOUR_PRIVATE_KEY]`
+- `client_id=[YOUR_CLIENT_ID]`
+- `company_id=[YOUR_COMPANY_ID]`
+- `manage_url=[YOUR_MANAGE_URL]`
 
-Execute the deployment script:
+### 3. Deploy the Application
 
-.\deploy.ps1
+Run the PowerShell deployment script:
 
+`.\deploy.ps1`
+
+This script will:
+
+- Set up the environment.
+- Launch the application using the credentials and configuration from your `.env` file.
+
+If everything is configured correctly, the script will begin checking time entries and sending notification emails as needed.
+
+---
+
+## Notes
+
+- Ensure Python and required dependencies are installed on your system.
+- For automation, you can schedule the script using Task Scheduler (Windows) or `cron` (Linux/macOS).

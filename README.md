@@ -10,6 +10,9 @@ The application is built using **Python** and integrates with the **ConnectWise 
 
 I noticed my supervisor keeps sending the per-diem submission request email to the employees manually. This made me think this is a good opportunity to automate it.
 
+## Architecture diagram
+<img src="images/diagram.jpg" alt="Alt text" width="800"/>
+
 ---
 
 ## How to Install
